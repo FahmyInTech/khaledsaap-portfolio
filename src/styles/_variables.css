@@ -1,0 +1,168 @@
+/*
+================================================================
+|                 GLOBAL DESIGN TOKENS (VARIABLES)             |
+|          This file is the single source of truth for         |
+|             the website's entire visual identity.            |
+================================================================
+*/
+
+:root {
+
+  /* ============================================= */
+  /* ==          1. COLOR PALETTE               == */
+  /* ============================================= */
+
+  /* --- OPTION 1: Modern Professional Portfolio (Recommended) --- */
+  /* Clean, sophisticated, and professional - perfect for creative portfolios */
+  --color-brand-primary: #2c3e50;    /* Deep Charcoal - Professional and modern */
+  --color-brand-primary-rgb: 44, 62, 80; /* RGB values for #2c3e50 */
+  --color-brand-secondary: #34495e;  /* Lighter charcoal variant */
+  --color-brand-accent: #3498db;     /* Professional blue for highlights */
+  --color-brand-light: #5dade2;      /* Light blue for interactive elements */
+  --color-brand-lighter: #85c1e9;    /* Lighter blue for hover states */
+  --color-brand-gold: #f39c12;       /* Warm orange for premium elements */
+  --color-brand-gold-rgb: 243, 156, 18; /* RGB values for gold accent */
+
+  /* --- OPTION 2: Creative Portfolio Theme --- */
+  /* Vibrant and creative - great for design/creative portfolios */
+  /*
+  --color-brand-primary: #e74c3c;    
+  --color-brand-primary-rgb: 231, 76, 60;
+  --color-brand-secondary: #c0392b;  
+  --color-brand-accent: #f39c12;     
+  --color-brand-light: #e67e22;      
+  --color-brand-lighter: #f1c40f;    
+  --color-brand-gold: #2ecc71;       
+  --color-brand-gold-rgb: 46, 204, 113;
+  */
+
+  /* --- OPTION 3: Minimalist Portfolio Theme --- */
+  /* Clean and minimal - perfect for architecture/tech portfolios */
+  /*
+  --color-brand-primary: #34495e;    
+  --color-brand-primary-rgb: 52, 73, 94;
+  --color-brand-secondary: #2c3e50;  
+  --color-brand-accent: #95a5a6;     
+  --color-brand-light: #bdc3c7;      
+  --color-brand-lighter: #ecf0f1;    
+  --color-brand-gold: #e67e22;       
+  --color-brand-gold-rgb: 230, 126, 34;
+  */
+
+  /* --- Primary Colors --- */
+  --color-background: #FFFFFF;      /* Pure White: For main page backgrounds */
+  --color-text-primary: #2c3e50;  /* Brand primary for main body text and headings */
+
+  /* --- Hero Section Colors (Updated to match brand identity) --- */
+  --color-hero-primary: #1a252f;    /* Darkest hero background color */
+  --color-hero-primary-rgb: 26, 37, 47; /* RGB values for #1a252f */
+  --color-hero-secondary: var(--color-brand-primary);  /* Brand primary color */
+  --color-hero-accent: var(--color-brand-secondary);     /* Brand secondary color */
+  --color-hero-light: var(--color-brand-accent);      /* Brand accent color */
+  --color-hero-gold: var(--color-brand-gold); /* Brand gold accent */
+
+  /* --- Accent Colors (Updated to complement brand identity) --- */
+  --color-accent: var(--color-brand-accent);          /* Brand accent for primary buttons and links */
+  --color-accent-rgb: 52, 152, 219; /* RGB values for brand accent */
+  --color-accent-light: var(--color-brand-light);    /* Brand light for hover states */
+  --color-accent-dark: var(--color-brand-secondary);     /* Brand secondary for active states */
+  --color-accent-gold: var(--color-brand-gold); /* Brand gold accent */
+  --color-accent-gold-rgb: 243, 156, 18; /* RGB values for Gold */
+  --color-accent-gold-light: #f7dc6f; /* Light Gold: For subtle gold accents */
+  --color-accent-gold-dark: #d68910;  /* Dark Gold: For strong gold emphasis */
+  --color-accent-red: #e74c3c;      /* Red: For critical call-to-action buttons */
+  --color-accent-red-rgb: 231, 76, 60; /* RGB values for Red */
+
+  /* --- Sophisticated Supporting Colors (Updated for brand identity) --- */
+  --color-background-warm: #f8f9fa; /* Light gray: For secondary backgrounds and project cards */
+  --color-background-warm-rgb: 248, 249, 250; /* RGB values for light gray */
+  --color-background-warm-light: #ffffff; /* Pure white: For very subtle backgrounds */
+  --color-background-warm-dark: #e9ecef;  /* Darker gray: For stronger accents */
+  --color-accent-silver: #95a5a6;   /* Medium gray: For subtle details, icons, and borders */
+  --color-accent-silver-rgb: 149, 165, 166; /* RGB values for Medium Gray */
+  --color-accent-silver-light: #bdc3c7; /* Light gray: For very subtle details */
+  --color-accent-silver-dark: #7f8c8d;  /* Dark gray: For stronger gray emphasis */
+
+  /* --- Neutral Gray Tones (Updated for brand identity) --- */
+  --color-background-alt: #f8f9fa; /* Light Gray: For alternating background sections */
+  --color-border: #dee2e6;          /* Border Gray: For dividers, card borders, and form inputs */
+  --color-text-secondary: #6c757d;  /* Muted Gray: For secondary text, subtitles, and metadata */
+
+  /* --- Semantic Color Variables (Updated for brand identity) --- */
+  --color-success: #27ae60;         /* Success Green: For positive feedback and success states */
+  --color-warning: #f39c12;         /* Warning Orange: For caution and warning states */
+  --color-error: var(--color-accent-red); /* Error Red: For error states and critical actions */
+  --color-info: var(--color-accent); /* Info Blue: For informational elements */
+  
+  /* --- Interactive State Colors (Updated for brand identity) --- */
+  --color-hover: var(--color-accent-light); /* Hover state color */
+  --color-active: var(--color-accent-dark); /* Active state color */
+  --color-focus: var(--color-accent); /* Focus state color */
+  --color-disabled: var(--color-accent-silver); /* Disabled state color */
+
+  /* --- Gradient Variables (Updated for professional gray to blue system) --- */
+  --gradient-primary: linear-gradient(135deg, #34495e 0%, #5dade2 50%, #85c1e9 100%);
+  --gradient-premium: linear-gradient(135deg, #5dade2 0%, #85c1e9 100%);
+  --gradient-warm: linear-gradient(135deg, var(--color-background-warm) 0%, var(--color-background-warm-dark) 100%);
+  --gradient-subtle: linear-gradient(135deg, var(--color-accent-silver-light) 0%, var(--color-accent-silver) 100%);
+  --gradient-hero: linear-gradient(135deg, var(--color-hero-primary) 0%, var(--color-hero-secondary) 50%, var(--color-hero-accent) 100%);
+  --gradient-hero-gold: linear-gradient(135deg, #f39c12 0%, #f7dc6f 100%);
+  --gradient-brand: linear-gradient(135deg, #34495e 0%, #5dade2 100%);
+
+
+  /* ============================================= */
+  /* ==          2. TYPOGRAPHY                  == */
+  /* ============================================= */
+
+  /* --- Font Families --- */
+  /* Using a single, versatile font family like Poppins provides a modern and consistent look. */
+  --font-family-base: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-heading: 'Poppins', sans-serif;
+
+  /* --- Font Weights --- */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* --- Font Sizes (Modular Scale) --- */
+  --font-size-base: 1rem;       /* Default body font size (16px) */
+  --font-size-sm: 0.875rem;     /* Small text (14px) */
+  --font-size-lg: 1.25rem;      /* Large text (20px) */
+  --font-size-xl: 1.5rem;       /* Extra large text (24px) */
+  --font-size-h1: 3rem;         /* ~48px */
+  --font-size-h2: 2.25rem;      /* ~36px */
+  --font-size-h3: 1.75rem;      /* ~28px */
+  --font-size-h4: 1.25rem;      /* ~20px */
+
+
+  /* ============================================= */
+  /* ==     3. SPACING, LAYOUT & EFFECTS        == */
+  /* ============================================= */
+
+  /* --- Spacing Units (based on an 8px grid) --- */
+  --spacing-xs: 0.25rem;  /* 4px */
+  --spacing-sm: 0.5rem;   /* 8px */
+  --spacing-md: 1rem;     /* 16px */
+  --spacing-lg: 2rem;     /* 32px */
+  --spacing-xl: 4rem;     /* 64px */
+  --spacing-xxl: 8rem;    /* 128px */
+
+  /* --- Layout --- */
+  --container-width: 1200px; /* Max width for the main content area */
+  --container-padding: var(--spacing-lg); /* Side padding for the container */
+
+  /* --- Borders & Effects --- */
+  --border-radius: 8px; /* Standard border radius for cards and buttons */
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* A subtle shadow for elevated elements */
+  --transition-fast: 200ms ease-in-out;
+  --transition-smooth: 400ms ease-in-out;
+
+  /* --- Enhanced Shadow System (Updated for brand identity) --- */
+  --shadow-subtle: 0 2px 8px rgba(8, 48, 66, 0.15);
+  --shadow-medium: 0 8px 25px rgba(8, 48, 66, 0.2);
+  --shadow-large: 0 20px 40px rgba(8, 48, 66, 0.25);
+  --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.15);
+  --shadow-warm: 0 8px 25px rgba(248, 249, 250, 0.3);
+
+} 

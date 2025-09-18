@@ -1,0 +1,317 @@
+/* ===================================
+   Main CSS File - Portfolio Website
+   =================================== */
+
+/* Import CSS Variables */
+@import './_variables.css';
+
+/* Import Component Styles */
+@import './components/_header.css';
+@import './components/_footer.css';
+@import './components/_buttons.css';
+@import './components/_cards.css';
+@import './components/_hero-section.css';
+@import './components/_quick-about.css';
+@import './components/_section-header.css';
+@import './components/_project-card.css';
+@import './components/_latest-work.css';
+@import './components/_client-logos.css';
+@import './components/_cta.css';
+@import './components/_hover-system.css';
+
+/* Import Page-Specific Styles */
+@import './pages/_home.css';
+@import './pages/_case-study.css';
+@import './pages/_about.css';
+@import './pages/_portfolio.css';
+@import './pages/_clients.css';
+@import './pages/_experience.css';
+@import './pages/_contact.css';
+@import './pages/_category-landing.css';
+
+/* ============================================= */
+/* ==           GENTLE CSS RESET               == */
+/* ============================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* ============================================= */
+/* ==           BASE STYLES                    == */
+/* ============================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ============================================= */
+/* ==           TYPOGRAPHY CLASSES             == */
+/* ============================================= */
+
+.heading-xl {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary);
+}
+
+.heading-lg {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary);
+}
+
+.heading-md {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary);
+}
+
+.heading-sm {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary);
+}
+
+.text-body {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary);
+}
+
+.text-muted {
+  color: var(--color-text-secondary);
+}
+
+.link-accent {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.link-accent:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* ============================================= */
+/* ==           LAYOUT & CONTAINERS            == */
+/* ============================================= */
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ============================================= */
+/* ==           UTILITY CLASSES                == */
+/* ============================================= */
+
+.mt-5 { margin-top: var(--spacing-lg); }
+.mb-5 { margin-bottom: var(--spacing-lg); }
+.pt-5 { padding-top: var(--spacing-lg); }
+.pb-5 { padding-bottom: var(--spacing-lg); }
+
+/* ============================================= */
+/* ==           RESPONSIVE DESIGN              == */
+/* ============================================= */
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.5rem;
+    --font-size-h4: 1.125rem;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .section {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  /* Ensure proper spacing for fixed header */
+  main {
+    padding-top: 0; /* Remove any default padding that might cause overlap */
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.75rem;
+    --font-size-h3: 1.25rem;
+    --font-size-h4: 1rem;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .section {
+    padding: var(--spacing-md) 0;
+  }
+}
+
+/* ============================================= */
+/* ==           ACCESSIBILITY                  == */
+/* ============================================= */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ============================================= */
+/* ==           PRINT STYLES                   == */
+/* ============================================= */
+
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  a, a:visited {
+    text-decoration: underline;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  
+  thead {
+    display: table-header-group;
+  }
+  
+  tr, img {
+    page-break-inside: avoid;
+  }
+  
+  img {
+    max-width: 100% !important;
+  }
+  
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* ============================================= */
+/* ==      TEMPORARY DEBUGGING STYLES         == */
+/* ============================================= */
+/* This helps visualize the layout. It will be removed later. */
+
+/* ============================================= */
+/* ==           PAGE START HELPER CLASS       == */
+/* ============================================= */
+/* This class is added to the first section of any page that is not the homepage to prevent the fixed header from overlapping the content. */
+.page-start {
+  padding-top: 120px; /* A generous padding to clear the header */
+}
+
+/* ============================================= */
+/* ==           TABLET RESPONSIVE STYLES      == */
+/* ============================================= */
+/* --- Tablet Responsive Styles (e.g., iPad Pro Portrait) --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Reduce hero headline size for tablets */
+  .hero-section .text-7xl {
+    font-size: 4.5rem; /* Equivalent to text-5xl or text-6xl */
+  }
+  
+  /* Use a 2-column grid for project cards on tablets */
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Use a 2-column grid for the client grid on the clients page */
+  .clients-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  /* Stack the footer into 2 columns on tablets for better readability */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+

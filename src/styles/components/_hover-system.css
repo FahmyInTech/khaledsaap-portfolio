@@ -1,0 +1,520 @@
+/* ===================================
+   Enhanced Hover System
+   =================================== */
+
+/* Global Hover Variables */
+:root {
+  --hover-lift-distance: 12px;
+  --hover-scale-factor: 1.05;
+  --hover-transition-duration: 0.6s;
+  --hover-transition-timing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --hover-shadow-color: rgba(52, 152, 219, 0.25);
+  --hover-glow-color: rgba(52, 152, 219, 0.3);
+}
+
+/* ===================================
+   Card Hover System
+   =================================== */
+
+/* Enhanced Card Hover */
+.card-hover {
+  transition: all var(--hover-transition-duration) var(--hover-transition-timing);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent);
+  transition: left 0.8s ease;
+  z-index: 1;
+}
+
+.card-hover:hover::before {
+  left: 100%;
+}
+
+.card-hover:hover {
+  transform: translateY(calc(-1 * var(--hover-lift-distance))) scale(var(--hover-scale-factor));
+  box-shadow: 
+    0 20px 40px var(--hover-shadow-color),
+    0 0 0 1px rgba(52, 152, 219, 0.2);
+}
+
+/* ===================================
+   Portfolio Item Hover System
+   =================================== */
+
+.portfolio-item-hover {
+  transition: all var(--hover-transition-duration) var(--hover-transition-timing);
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.15), transparent);
+  transition: left 0.8s ease;
+  z-index: 2;
+}
+
+.portfolio-item-hover:hover::before {
+  left: 100%;
+}
+
+.portfolio-item-hover:hover {
+  transform: translateY(calc(-1 * var(--hover-lift-distance))) scale(1.02);
+  border-color: #3498db;
+  box-shadow: 
+    0 25px 60px var(--hover-glow-color),
+    0 0 0 2px rgba(52, 152, 219, 0.3);
+}
+
+/* Portfolio Image Hover */
+.portfolio-image-hover {
+  transition: all 0.6s ease;
+}
+
+.portfolio-item-hover:hover .portfolio-image-hover {
+  transform: scale(1.1);
+}
+
+/* Portfolio Arrow Hover */
+.portfolio-arrow-hover {
+  transition: all 0.4s ease;
+}
+
+.portfolio-item-hover:hover .portfolio-arrow-hover {
+  transform: translateX(8px) scale(1.1);
+  color: #3498db;
+}
+
+/* ===================================
+   Client Card Hover System
+   =================================== */
+
+.client-card-hover {
+  transition: all var(--hover-transition-duration) var(--hover-transition-timing);
+  position: relative;
+  overflow: hidden;
+}
+
+.client-card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent);
+  transition: left 0.8s ease;
+  z-index: 2;
+}
+
+.client-card-hover:hover::before {
+  left: 100%;
+}
+
+.client-card-hover:hover {
+  transform: translateY(calc(-1 * var(--hover-lift-distance))) scale(1.05);
+  border-color: #3498db;
+  box-shadow: 
+    0 20px 50px var(--hover-glow-color),
+    0 0 0 2px rgba(52, 152, 219, 0.3);
+}
+
+/* Client Logo Hover */
+.client-logo-hover {
+  transition: all 0.4s ease;
+  filter: grayscale(80%) brightness(0.8) contrast(1.2);
+}
+
+.client-card-hover:hover .client-logo-hover {
+  filter: grayscale(0%) brightness(1.2) contrast(1.1);
+  transform: scale(1.15);
+}
+
+/* ===================================
+   Work Card Hover System
+   =================================== */
+
+.work-card-hover {
+  transition: all var(--hover-transition-duration) var(--hover-transition-timing);
+  position: relative;
+  overflow: hidden;
+}
+
+.work-card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent);
+  transition: left 0.8s ease;
+  z-index: 2;
+}
+
+.work-card-hover:hover::before {
+  left: 100%;
+}
+
+.work-card-hover:hover {
+  transform: translateY(-16px) scale(1.02);
+  border-color: #3498db;
+  box-shadow: 
+    0 30px 70px var(--hover-glow-color),
+    0 0 0 2px rgba(52, 152, 219, 0.3);
+}
+
+/* Work Card Image Hover */
+.work-image-hover {
+  transition: all 0.6s ease;
+}
+
+.work-card-hover:hover .work-image-hover {
+  transform: scale(1.15);
+}
+
+/* Work Card Arrow Hover */
+.work-arrow-hover {
+  transition: all 0.4s ease;
+}
+
+.work-card-hover:hover .work-arrow-hover {
+  transform: translateX(8px) scale(1.1);
+  color: #3498db;
+}
+
+/* ===================================
+   Button Hover System
+   =================================== */
+
+.btn-hover {
+  position: relative;
+  overflow: hidden;
+  transition: all var(--hover-transition-duration) var(--hover-transition-timing);
+}
+
+.btn-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.btn-hover:hover::before {
+  left: 100%;
+}
+
+.btn-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+}
+
+/* ===================================
+   Navigation Hover System
+   =================================== */
+
+.nav-link-hover {
+  position: relative;
+  transition: all var(--hover-transition-duration) var(--hover-transition-timing);
+  overflow: hidden;
+}
+
+.nav-link-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #3498db 0%, #5dade2 50%, #85c1e9 100%);
+  opacity: 0;
+  transition: all var(--hover-transition-duration) var(--hover-transition-timing);
+  z-index: -1;
+  transform: translateY(100%);
+}
+
+.nav-link-hover::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  transform: translate(-50%, -50%);
+}
+
+.nav-link-hover:hover::before,
+.nav-link-hover--active::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-link-hover:hover::after {
+  width: 100px;
+  height: 100px;
+}
+
+.nav-link-hover:hover,
+.nav-link-hover--active {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+}
+
+/* ===================================
+   Social Link Hover System
+   =================================== */
+
+.social-link-hover {
+  position: relative;
+  overflow: hidden;
+  transition: all var(--hover-transition-duration) var(--hover-transition-timing);
+}
+
+.social-link-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #3498db 0%, #5dade2 50%, #85c1e9 100%);
+  transform: scale(0);
+  transition: transform 0.4s ease;
+  z-index: 1;
+}
+
+.social-link-hover:hover::before {
+  transform: scale(1);
+}
+
+.social-link-hover:hover {
+  color: white;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+}
+
+.social-link-hover svg {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===================================
+   Filter Button Hover System
+   =================================== */
+
+.filter-btn-hover {
+  position: relative;
+  overflow: hidden;
+  transition: all var(--hover-transition-duration) var(--hover-transition-timing);
+}
+
+.filter-btn-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.filter-btn-hover:hover::before {
+  left: 100%;
+}
+
+.filter-btn-hover:hover {
+  border-color: #3498db;
+  color: #3498db;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+}
+
+.filter-btn-hover--active {
+  background: linear-gradient(135deg, #3498db 0%, #5dade2 50%, #85c1e9 100%);
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.filter-btn-hover--active:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+  color: white;
+}
+
+/* ===================================
+   Contact Form Hover System
+   =================================== */
+
+.form-group-hover {
+  transition: all var(--hover-transition-duration) var(--hover-transition-timing);
+}
+
+.form-group-hover:hover {
+  transform: translateX(3px);
+}
+
+.form-input-hover {
+  transition: all var(--hover-transition-duration) var(--hover-transition-timing);
+}
+
+.form-input-hover:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  transform: translateY(-1px);
+}
+
+.form-icon-hover {
+  transition: all var(--hover-transition-duration) var(--hover-transition-timing);
+}
+
+.form-group-hover:focus-within .form-icon-hover {
+  color: #3498db;
+  transform: scale(1.05);
+}
+
+/* ===================================
+   Contact Info Hover System
+   =================================== */
+
+.contact-info-hover {
+  position: relative;
+  overflow: hidden;
+  transition: all var(--hover-transition-duration) var(--hover-transition-timing);
+}
+
+.contact-info-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, #3498db 0%, #5dade2 50%, #85c1e9 100%);
+  transform: scaleY(0);
+  transition: transform 0.4s ease;
+}
+
+.contact-info-hover:hover::before {
+  transform: scaleY(1);
+}
+
+.contact-info-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: #3498db;
+}
+
+.contact-icon-hover {
+  transition: all var(--hover-transition-duration) var(--hover-transition-timing);
+}
+
+.contact-info-hover:hover .contact-icon-hover {
+  transform: scale(1.05) rotate(3deg);
+}
+
+/* ===================================
+   Mobile Optimizations
+   =================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --hover-lift-distance: 8px;
+    --hover-scale-factor: 1.02;
+  }
+  
+  /* Reduce hover effects on mobile for better performance */
+  .card-hover:hover,
+  .portfolio-item-hover:hover,
+  .client-card-hover:hover,
+  .work-card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+  
+  .btn-hover:hover,
+  .nav-link-hover:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 480px) {
+  /* Disable complex hover effects on small mobile for better performance */
+  .card-hover:hover,
+  .portfolio-item-hover:hover,
+  .client-card-hover:hover,
+  .work-card-hover:hover {
+    transform: none;
+  }
+  
+  .btn-hover:hover,
+  .nav-link-hover:hover {
+    transform: none;
+  }
+}
+
+/* ===================================
+   Performance Optimizations
+   =================================== */
+
+/* Use transform3d for hardware acceleration */
+.card-hover,
+.portfolio-item-hover,
+.client-card-hover,
+.work-card-hover,
+.btn-hover,
+.nav-link-hover,
+.social-link-hover,
+.filter-btn-hover,
+.contact-info-hover {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .card-hover,
+  .portfolio-item-hover,
+  .client-card-hover,
+  .work-card-hover,
+  .btn-hover,
+  .nav-link-hover,
+  .social-link-hover,
+  .filter-btn-hover,
+  .contact-info-hover {
+    transition: none;
+  }
+  
+  .card-hover::before,
+  .portfolio-item-hover::before,
+  .client-card-hover::before,
+  .work-card-hover::before,
+  .btn-hover::before,
+  .nav-link-hover::before,
+  .social-link-hover::before,
+  .filter-btn-hover::before {
+    display: none;
+  }
+}

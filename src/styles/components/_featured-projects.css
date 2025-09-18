@@ -1,0 +1,66 @@
+/* Featured Projects Component */
+.featured-projects {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-background);
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  font-size: 0.875rem; /* 14px */
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem; /* A larger gap for a more spacious feel */
+}
+
+.project-card {
+  display: block;
+  text-decoration: none;
+}
+
+.project-card__image-wrapper {
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  background-color: var(--color-background-alt);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover .project-card__image-wrapper {
+  box-shadow: var(--box-shadow);
+}
+
+.project-card__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-card__image {
+  transform: scale(1.05);
+}
+
+.project-card__content {
+  margin-top: 1rem;
+}
+
+.project-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.project-card__category {
+  margin-top: 0.25rem;
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+} 

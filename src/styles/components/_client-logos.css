@@ -1,0 +1,378 @@
+/* Client Logos Section - Modern Design */
+.client-logos {
+  position: relative;
+  padding: var(--spacing-xxl) 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-text-primary) 0%, #1a1a1a 100%);
+  color: var(--color-background);
+}
+
+.client-logos__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.client-logos__gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(0, 139, 139, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(191, 160, 90, 0.08) 0%, transparent 50%);
+}
+
+.client-logos__pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: patternMove 15s linear infinite;
+}
+
+@keyframes patternMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(40px, 40px); }
+}
+
+.client-logos .container {
+  position: relative;
+  z-index: 2;
+}
+
+.client-logos__header {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+}
+
+.client-logos__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  backdrop-filter: blur(10px);
+  animation: badgeGlow 3s ease-in-out infinite;
+}
+
+@keyframes badgeGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 139, 139, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(0, 139, 139, 0.4); }
+}
+
+.client-logos__badge-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--color-accent);
+}
+
+.client-logos__badge-text {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-background);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.client-logos__heading {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+  background: linear-gradient(135deg, var(--color-background) 0%, rgba(255, 255, 255, 0.9) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.client-logos__highlight {
+  background: linear-gradient(135deg, #3498db 0%, #5dade2 50%, #85c1e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.client-logos__highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #5dade2);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.client-logos__heading:hover .client-logos__highlight::after {
+  transform: scaleX(1);
+}
+
+.client-logos__subtitle {
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.client-logos__container {
+  position: relative;
+  overflow: hidden;
+  padding: var(--spacing-lg) 0;
+}
+
+.client-logos__track {
+  display: flex;
+  animation: scrollLogos 30s linear infinite;
+  width: max-content;
+}
+
+@keyframes scrollLogos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.client-logos__group {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: center;
+  padding: 0 var(--spacing-lg);
+  flex-shrink: 0;
+}
+
+.logo-card {
+  position: relative;
+  width: 140px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.logo-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.2), transparent);
+  transition: left 0.8s ease;
+}
+
+.logo-card:hover::before {
+  left: 100%;
+}
+
+.logo-card:hover {
+  transform: translateY(-12px) scale(1.08);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #3498db;
+  box-shadow: 
+    0 25px 60px rgba(52, 152, 219, 0.3),
+    0 0 0 2px rgba(52, 152, 219, 0.4);
+}
+
+.logo-card img {
+  width: 80px; /* Increased from 60px */
+  height: 50px; /* Increased from 40px */
+  object-fit: contain;
+  filter: grayscale(80%) brightness(0.8) contrast(1.2); /* Improved filter for better visibility */
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.logo-card:hover img {
+  filter: grayscale(0%) brightness(1.2) contrast(1.1);
+  transform: scale(1.2);
+}
+
+.logo-card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.15) 0%, rgba(93, 173, 226, 0.15) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 20px;
+}
+
+.logo-card:hover .logo-card__overlay {
+  opacity: 1;
+}
+
+/* Pause animation on hover */
+.client-logos__container:hover .client-logos__track {
+  animation-play-state: paused;
+}
+
+/* Enhanced focus effect */
+.client-logos__container:hover .logo-card {
+  opacity: 0.6;
+  transform: scale(0.92);
+}
+
+.client-logos__container:hover .logo-card:hover {
+  opacity: 1;
+  transform: translateY(-12px) scale(1.08);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .client-logos__group {
+    gap: var(--spacing-lg);
+  }
+  
+  .logo-card {
+    width: 120px; /* Slightly smaller on tablets */
+    height: 85px;
+  }
+  
+  .logo-card img {
+    width: 70px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .client-logos {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .client-logos__header {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .client-logos__heading {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  
+  .client-logos__subtitle {
+    font-size: var(--font-size-base);
+    padding: 0 var(--spacing-md);
+  }
+  
+  .client-logos__container {
+    padding: var(--spacing-md) 0;
+  }
+  
+  .client-logos__track {
+    animation-duration: 40s; /* Faster animation on mobile */
+  }
+  
+  .client-logos__group {
+    gap: var(--spacing-md);
+    padding: 0 var(--spacing-md);
+  }
+  
+  .logo-card {
+    width: 100px;
+    height: 70px;
+  }
+  
+  .logo-card img {
+    width: 60px;
+    height: 40px;
+  }
+  
+  /* Reduce hover effects on mobile for better performance */
+  .logo-card:hover {
+    transform: translateY(-8px) scale(1.05);
+  }
+  
+  .client-logos__container:hover .logo-card {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .client-logos__container:hover .logo-card:hover {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.05);
+  }
+}
+
+@media (max-width: 480px) {
+  .client-logos {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .client-logos__header {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .client-logos__heading {
+    font-size: clamp(1.75rem, 10vw, 2.5rem);
+  }
+  
+  .client-logos__subtitle {
+    font-size: var(--font-size-sm);
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .client-logos__track {
+    animation-duration: 30s; /* Even faster on small mobile */
+  }
+  
+  .client-logos__group {
+    gap: var(--spacing-sm);
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .logo-card {
+    width: 85px;
+    height: 60px;
+  }
+  
+  .logo-card img {
+    width: 50px;
+    height: 35px;
+  }
+  
+  /* Disable hover effects on small mobile for better performance */
+  .logo-card:hover {
+    transform: none;
+  }
+  
+  .client-logos__container:hover .client-logos__track {
+    animation-play-state: running;
+  }
+  
+  .client-logos__container:hover .logo-card {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .client-logos__container:hover .logo-card:hover {
+    opacity: 1;
+    transform: none;
+  }
+} 
