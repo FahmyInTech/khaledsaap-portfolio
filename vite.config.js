@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
+  base: '/khaledsaap-portfolio/', // ← مهم: اسم الريبو مع شرطة في البداية والنهاية
   root: '.',
   build: {
     outDir: 'dist',
@@ -32,4 +33,4 @@ export default defineConfig({
       '@': resolve(__dirname, 'src')
     }
   }
-}) 
+})
