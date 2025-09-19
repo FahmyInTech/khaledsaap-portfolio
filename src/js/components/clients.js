@@ -1,7 +1,9 @@
+// استيراد كل ملفات الـ SVG من فولدر logos
+const logos = import.meta.glob('@/assets/images/logos/*.{svg,png,jpg,jpeg}', { eager: true, import: 'default' });
 // Clients Data with enhanced information
 const clientsData = {
   automotive: [
-    { name: "FAW", filename: "faw.svg", description: "A leading Chinese automotive manufacturing company.", projects: 1 },
+    { name: "FAW", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240062/faw_mqurhq.svg", description: "A leading Chinese automotive manufacturing company.", projects: 1 },
     { name: "Fuchs", filename: "fuchs.svg", description: "A global group that develops, produces, and distributes lubricants.", projects: 1 },
     { name: "Hankook", filename: "hankook-tire-white.svg", description: "A major South Korean tire manufacturing company.", projects: 1 },
     { name: "Honda", filename: "honda-automobiles-1.svg", description: "A Japanese multinational conglomerate known for automobiles and motorcycles.", projects: 1 },
@@ -89,7 +91,12 @@ function generateClientCard(client, category) {
     <div class="client-card" data-category="${category}">
       <div class="client-card__header">
         <div class="client-card__logo">
-          <img src="/src/assets/images/logos/${client.filename}" alt="${client.name} Logo" loading="lazy">
+        <img src="${
+  client.filename.startsWith('http') 
+    ? client.filename 
+    : logos[`/src/assets/images/logos/${client.filename}`]
+}" alt="${client.name} Logo" loading="lazy">
+
         </div>
         <div class="client-card__badges">
           <span class="client-card__projects-badge">${client.projects} Projects</span>
