@@ -25,7 +25,9 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       input: getHtmlFiles()
-    }
+    },
+    // Add this to handle assets better
+    assetsInlineLimit: 0
   },
   server: {
     port: 3000,
@@ -33,7 +35,11 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src')
+      '@': resolve(__dirname, 'src'),
+      // Add explicit alias for assets
+      '@assets': resolve(__dirname, 'assets')
     }
-  }
+  },
+  // Add this to handle different file types
+  assetsInclude: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif']
 })
