@@ -16,6 +16,9 @@
     "glob": "^10.4.5",
     "vite": "^5.0.0"
   },
+  "engines": {
+  "node": "18.x"
+},
   "keywords": [
     "portfolio",
     "creative-director",
