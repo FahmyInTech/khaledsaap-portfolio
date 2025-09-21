@@ -13,6 +13,14 @@ import { initClients } from './components/clients.js';
 import { initContactPage } from './components/contact.js';
 import { initCaseStudyNavigation } from './components/case-study-navigation.js';
 import './components/experience.js';
+import logo from '../assets/images/logos/ks-logo.svg';
+import '../styles/_variables.css';
+import '../styles/main.css';
+
+
+
+document.querySelector('.site-header__logo-container img').src = logo;
+
 
 // ===================================
 // Global Functions
