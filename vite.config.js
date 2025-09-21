@@ -36,10 +36,10 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
-      // Add explicit alias for assets
-      '@assets': resolve(__dirname, 'assets')
+      '@assets': resolve(__dirname, 'src/assets')
     }
-  },
+  }
+,
   // Add this to handle different file types
   assetsInclude: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif']
 })
