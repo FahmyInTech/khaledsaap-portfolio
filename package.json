@@ -13,12 +13,15 @@
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
-    "glob": "^10.4.5",
+    "glob": "^10.4.5"
+  },
+  "dependencies": {
+    "typed.js": "^2.1.0",
     "vite": "^5.0.0"
   },
   "engines": {
-  "node": "22.x"
-},
+    "node": "22.x"
+  },
   "keywords": [
     "portfolio",
     "creative-director",
@@ -26,8 +29,5 @@
     "branding"
   ],
   "author": "Khaled Saab",
-  "license": "MIT",
-  "dependencies": {
-    "typed.js": "^2.1.0"
-  }
+  "license": "MIT"
 }
