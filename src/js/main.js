@@ -14,7 +14,7 @@ import { initContactPage } from './components/contact.js';
 import { initCaseStudyNavigation } from './components/case-study-navigation.js';
 import './components/experience.js';
 // Instead of: import logo from '../assets/images/logos/ks-logo.svg'
-import logo from '@/assets/images/logos/ks-logo.svg'
+import logo from '@/assets/images/Logos/ks-logo.svg'
 import '../styles/_variables.css';
 import '../styles/main.css';
 
