@@ -4,57 +4,57 @@ const logos = import.meta.glob('@/assets/images/logos/*.{svg,png,jpg,jpeg}', { e
 const clientsData = {
   automotive: [
     { name: "FAW", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240062/faw_mqurhq.svg", description: "A leading Chinese automotive manufacturing company.", projects: 1 },
-    { name: "Fuchs", filename: "fuchs.svg", description: "A global group that develops, produces, and distributes lubricants.", projects: 1 },
-    { name: "Hankook", filename: "hankook-tire-white.svg", description: "A major South Korean tire manufacturing company.", projects: 1 },
-    { name: "Honda", filename: "honda-automobiles-1.svg", description: "A Japanese multinational conglomerate known for automobiles and motorcycles.", projects: 1 },
-    { name: "Mercedes-Benz", filename: "mercedes-benz-9.svg", description: "A global luxury and commercial vehicle automotive brand.", projects: 1 },
-    { name: "Mitsubishi", filename: "mitsubishi.svg", description: "A Japanese multinational automotive manufacturer.", projects: 2 },
-    { name: "Petromin", filename: "PETROMIN.svg", description: "A leading lubricants and automotive services company in Saudi Arabia.", projects: 1 },
-    { name: "Renault", filename: "renault.svg", description: "A French multinational automobile manufacturer.", projects: 1 },
-    { name: "Rolls-Royce", filename: "rolls-royce.svg", description: "A British luxury automobile maker.", projects: 3 }
+    { name: "Fuchs", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240062/fuchs_znusxf.svg", description: "A global group that develops, produces, and distributes lubricants.", projects: 1 },
+    { name: "Hankook", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240070/hankook-tire-white_hxfsjn.svg", description: "A major South Korean tire manufacturing company.", projects: 1 },
+    { name: "Honda", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240037/honda-automobiles-1_hdwvo5.svg", description: "A Japanese multinational conglomerate known for automobiles and motorcycles.", projects: 1 },
+    { name: "Mercedes-Benz", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240041/mercedes-benz-9_vgzij8.svg", description: "A global luxury and commercial vehicle automotive brand.", projects: 1 },
+    { name: "Mitsubishi", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240041/mitsubishi_xhgc90.svg", description: "A Japanese multinational automotive manufacturer.", projects: 2 },
+    { name: "Petromin", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240043/PETROMIN_l53sjd.svg", description: "A leading lubricants and automotive services company in Saudi Arabia.", projects: 1 },
+    { name: "Renault", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240045/renault_qosbj6.svg", description: "A French multinational automobile manufacturer.", projects: 1 },
+    { name: "Rolls-Royce", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240043/rolls-royce_ta5uro.svg", description: "A British luxury automobile maker.", projects: 3 }
   ],
   service: [
-    { name: "Careem", filename: "careem.svg", description: "A leading ride-hailing and delivery service in the Middle East.", projects: 1 },
-    { name: "Hyatt Regency", filename: "Hyatt Regency Logo Vector.svg", description: "A global brand of major hotels and resorts.", projects: 1 },
-    { name: "International Medical Center", filename: "International Medical Center Logo – SVG – PNG.svg", description: "A multi-disciplinary hospital providing comprehensive healthcare services.", projects: 1 },
-    { name: "King Faisal Specialist Hospital", filename: "king-faisal-specialist-hospital-research-centre-seeklogo.svg", description: "A leading tertiary healthcare organization in the Middle East.", projects: 1 },
-    { name: "National Water Company", filename: "National Water Company.svg", description: "The state-owned water utility provider in Saudi Arabia.", projects: 1 },
-    { name: "Zain", filename: "Zain.svg", description: "A leading mobile telecommunications provider across the Middle East and Africa.", projects: 4 }
+    { name: "Careem", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240060/careem_dtx9ko.svg", description: "A leading ride-hailing and delivery service in the Middle East.", projects: 1 },
+    { name: "Hyatt Regency", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240036/Hyatt_Regency_Logo_Vector_u5bhyr.svg", description: "A global brand of major hotels and resorts.", projects: 1 },
+    { name: "International Medical Center", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240037/International_Medical_Center_Logo_SVG_PNG_t585o5.svg", description: "A multi-disciplinary hospital providing comprehensive healthcare services.", projects: 1 },
+    { name: "King Faisal Specialist Hospital", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240039/king-faisal-specialist-hospital-research-centre-seeklogo_bosc3m.svg", description: "A leading tertiary healthcare organization in the Middle East.", projects: 1 },
+    { name: "National Water Company", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240041/National_Water_Company_wjwtxa.svg", description: "The state-owned water utility provider in Saudi Arabia.", projects: 1 },
+    { name: "Zain", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240052/Zain_fteygg.svg", description: "A leading mobile telecommunications provider across the Middle East and Africa.", projects: 4 }
   ],
   financial: [
-    { name: "Al Rajhi Takaful", filename: "Al Rajhi Takaful_idnVnJYgo9_1.svg", description: "A major provider of cooperative insurance solutions in Saudi Arabia.", projects: 1 },
-    { name: "Al Ahli Bank (NCB)", filename: "Alahli-01.svg", description: "One of the largest commercial banks in Saudi Arabia.", projects: 1 },
-    { name: "Alinma Bank", filename: "Alinma-01.svg", description: "A prominent Sharia-compliant banking institution in Saudi Arabia.", projects: 1 },
-    { name: "Bank Aljazira", filename: "Bank Aljazira.svg", description: "A leading Islamic banking institution in Saudi Arabia.", projects: 10 },
-    { name: "Kafalah", filename: "Kafalah_id5N_Dr8Qy_0.png", description: "A Saudi government program that supports financing for SMEs.", projects: 1 },
-    { name: "Taajeer Finance", filename: "taajeer-finance-seeklogo.png", description: "A financial services company specializing in leasing and financing.", projects: 1 },
-    { name: "Saudi Exchange (Tadawul)", filename: "Main-Logo-PNG-Format.svg", description: "The official stock exchange of Saudi Arabia.", projects: 1 }
+    { name: "Al Rajhi Takaful", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240053/Al_Rajhi_Takaful_idnVnJYgo9_1_fzxgac.svg", description: "A major provider of cooperative insurance solutions in Saudi Arabia.", projects: 1 },
+    { name: "Al Ahli Bank (NCB)", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240053/Alahli-01_bhlrvm.svg", description: "One of the largest commercial banks in Saudi Arabia.", projects: 1 },
+    { name: "Alinma Bank", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240054/Alinma-01_biynyi.svg", description: "A prominent Sharia-compliant banking institution in Saudi Arabia.", projects: 1 },
+    { name: "Bank Aljazira", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240060/Bank_ALjazira_arudad.svg", description: "A leading Islamic banking institution in Saudi Arabia.", projects: 10 },
+    { name: "Kafalah", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240037/Kafalah_id5N_Dr8Qy_0_ucyrco.png", description: "A Saudi government program that supports financing for SMEs.", projects: 1 },
+    { name: "Taajeer Finance", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240048/taajeer-finance-seeklogo_lpoeoq.png", description: "A financial services company specializing in leasing and financing.", projects: 1 },
+    { name: "Saudi Exchange (Tadawul)", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240040/Main-Logo-PNG-Format_bhrqgc.svg", description: "The official stock exchange of Saudi Arabia.", projects: 1 }
   ],
   fmcg: [
-    { name: "Almarai", filename: "Almarai.svg", description: "The world's largest vertically integrated dairy company.", projects: 1 },
-    { name: "Dabur", filename: "Dabur-Logo.wine.svg", description: "A leading Indian multinational consumer goods company.", projects: 1 },
-    { name: "Goody", filename: "goody.svg", description: "A well-known Saudi brand for canned food products.", projects: 1 },
-    { name: "Nestlé", filename: "nestle-4.svg", description: "A Swiss multinational food and drink processing conglomerate.", projects: 1 },
-    { name: "Unilever", filename: "unilever-4.svg", description: "A British multinational consumer goods company.", projects: 1 }
+    { name: "Almarai", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240055/Almarai_ajiurl.svg", description: "The world's largest vertically integrated dairy company.", projects: 1 },
+    { name: "Dabur", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240061/Dabur-Logo.wine_cmoxfm.svg", description: "A leading Indian multinational consumer goods company.", projects: 1 },
+    { name: "Goody", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240068/goody_xuej4p.svg", description: "A well-known Saudi brand for canned food products.", projects: 1 },
+    { name: "Nestlé", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240042/nestle-4_jky5w7.svg", description: "A Swiss multinational food and drink processing conglomerate.", projects: 1 },
+    { name: "Unilever", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240052/unilever-4_onhror.svg", description: "A British multinational consumer goods company.", projects: 1 }
   ],
   industrial: [
-    { name: "BAE Systems", filename: "bae-systems.svg", description: "A British multinational arms, security, and aerospace company.", projects: 1 },
-    { name: "CPC (Construction Products Holding)", filename: "Cpc Construction Products Holding Company Logo Vector.svg", description: "A leading manufacturer of building materials in the region.", projects: 4 },
-    { name: "Jotun", filename: "jotun.svg", description: "A Norwegian multinational chemicals company dealing in decorative paints and performance coatings.", projects: 1 },
-    { name: "Tetra Pak", filename: "tetra-pak-1.svg", description: "A multinational food packaging and processing company.", projects: 1 }
+    { name: "BAE Systems", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240059/bae-systems-1_xa9x5r.svg", description: "A British multinational arms, security, and aerospace company.", projects: 1 },
+    { name: "CPC (Construction Products Holding)", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240061/Cpc_Construction_Products_Holding_Company_Logo_Vector_j6qype.svg", description: "A leading manufacturer of building materials in the region.", projects: 4 },
+    { name: "Jotun", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240036/jotun_g3jcq9.svg", description: "A Norwegian multinational chemicals company dealing in decorative paints and performance coatings.", projects: 1 },
+    { name: "Tetra Pak", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240051/tetra-pak-1_kzi8rf.svg", description: "A multinational food packaging and processing company.", projects: 1 }
   ],
   "health-wellness": [
-    { name: "AbbVie", filename: "abbvie-1.svg", description: "A global biopharmaceutical company focused on developing advanced therapies.", projects: 1 },
-    { name: "Diet Center", filename: "diet-center.svg", description: "A leading provider of healthy meals and nutritional consultation.", projects: 1 },
-    { name: "Saudi Enaya", filename: "8311.SR_BIG.svg", description: "A cooperative health insurance company in Saudi Arabia.", projects: 2 }
+    { name: "AbbVie", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240053/abbvie-1_rbkmcp.svg", description: "A global biopharmaceutical company focused on developing advanced therapies.", projects: 1 },
+    { name: "Diet Center", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240061/diet-center_mekfqc.svg", description: "A leading provider of healthy meals and nutritional consultation.", projects: 1 },
+    { name: "Saudi Enaya", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240052/8311.SR_BIG_hrmdhp.svg", description: "A cooperative health insurance company in Saudi Arabia.", projects: 2 }
   ],
   retail: [
-    { name: "Garnier", filename: "garnier-2.svg", description: "A mass-market cosmetics brand of French cosmetics company L'Oréal.", projects: 1 },
-    { name: "Panda", filename: "panda-retail-company-seeklogo.svg", description: "One of the largest grocery retail chains in Saudi Arabia.", projects: 1 }
+    { name: "Garnier", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240062/garnier-2_kyfdgm.svg", description: "A mass-market cosmetics brand of French cosmetics company L'Oréal.", projects: 1 },
+    { name: "Panda", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240043/panda-retail-company-seeklogo_twwgfj.svg", description: "One of the largest grocery retail chains in Saudi Arabia.", projects: 1 }
   ],
   destination: [
-    { name: "KAEC (King Abdullah Economic City)", filename: "king-abdullah-economic-city-kaec-seeklogo.svg", description: "A megaproject and tourist destination on the Red Sea coast.", projects: 1 },
-    { name: "Saudi Arabian Airlines", filename: "saudi-arabian-airlines.svg", description: "The national flag carrier airline of Saudi Arabia.", projects: 1 }
+    { name: "KAEC (King Abdullah Economic City)", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240038/king-abdullah-economic-city-kaec-seeklogo_gns1gu.svg", description: "A megaproject and tourist destination on the Red Sea coast.", projects: 1 },
+    { name: "Saudi Arabian Airlines", filename: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758240045/saudi-arabian-airlines_r6qb7r.svg", description: "The national flag carrier airline of Saudi Arabia.", projects: 1 }
   ]
 };
 
