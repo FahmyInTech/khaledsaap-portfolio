@@ -13,8 +13,7 @@ export function initContactPage() {
     // Initialize EmailJS
     function initEmailJS() {
         // Initialize EmailJS with your public key
-        // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
-        emailjs.init("YOUR_PUBLIC_KEY");
+        emailjs.init("N0sxu-8v3zgFHH4vk");
         console.log('EmailJS initialized');
     }
     
@@ -166,8 +165,9 @@ export function initContactPage() {
         };
         
         // EmailJS configuration
-        const serviceID = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
-        const templateID = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID
+        
+        const serviceID = 'service_hy7gnjm';
+        const templateID = 'template_nhcw623';
         
         // Send email using EmailJS
         emailjs.send(serviceID, templateID, templateParams)
