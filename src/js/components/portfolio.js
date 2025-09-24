@@ -15,7 +15,7 @@ const portfolioData = [
     { title: "NCB Bank - Islamic Card Summer Promo", category: "banking-finance", slug: "ncb-islamic-card-promo", thumbnail: "https://res.cloudinary.com/dgqequjgk/image/upload/v1757608417/NCB_Bank_SNB_gra0ir.png" },
 
     // Logos & Brand Identity
-    { title: "Palma | Event Planning & Management", category: "logos-brand-identity", slug: "palma-identity", thumbnail: "/src/assets/images/projects/palma-identity/palmaevent_logo.png" },
+    { title: "Palma | Event Planning & Management", category: "logos-brand-identity", slug: "palma-identity", thumbnail: "https://res.cloudinary.com/dgqequjgk/image/upload/v1758588857/palmaevent_logo_zotknt.png" },
     { title: "CPC | New Logo and Brand Identity", category: "logos-brand-identity", slug: "cpc-logo&brand", thumbnail: "https://res.cloudinary.com/dgqequjgk/image/upload/v1757408153/cpc-construction-products-holding-company-logo-png_seeklogo-324992_soen5y.png" },
     { title: "Bloq | Logo Creations", category: "logos-brand-identity", slug: "bloq-logo", thumbnail: "https://res.cloudinary.com/dgqequjgk/image/upload/v1757406579/Screenshot_2025-09-09_112831_jy9jgp.png" },
     { title: "AlReef Sugar | Brand Identity", category: "logos-brand-identity", slug: "alreef-sugar", thumbnail: "https://res.cloudinary.com/dgqequjgk/image/upload/v1756386153/%D8%AA%D8%B5%D9%85%D9%8A%D9%85_%D8%A8%D8%AF%D9%88%D9%86_%D8%B9%D9%86%D9%88%D8%A7%D9%86_2_vieebz.png" },
